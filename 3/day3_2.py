@@ -1,5 +1,13 @@
 import numpy as np
 
+
+#Tanken är att göra liknande förra gången. Denna gången kollar man alla siffror och om de är granne med *. Om det är så så skickar checkNb med koordinaterna för grannarna (ett nummer kan ha flera grannar)
+#Man får även se till att en granne endast förekommer en gång för alla siffror i numret. 
+#Sedan sparas en numret i en vektor likt förut, men nu finns även en vektor som innehåller koordinater för grannstjärnor. Dessa vektorer är lika stora. De fleska nummer har inga grannar
+#Sedan sorteras båda listorna enligt koordinatmönstret, så att alla koordinater kommer i ordning. Detta gör att koordinater som förekommer EXAKT två gånger hamnar bredvid varandra.
+#Sist loopar man igenom koordinatvektorn och kollar så att koordinatlistan inte är tom, och att den förekommer exakt två gånger. Man sparar numrena som motsvarar detta villkor i en egen ny vektor.
+#Sedan multiplicerar man varje nummer i den nya vektorm med sin granne och sen har man svaret. 
+
 def checkNb(i,j):
     status = False
     starnb = []
