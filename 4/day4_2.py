@@ -2,8 +2,6 @@ import numpy as np
 
 f = open(r"C:\Users\erijoh\OneDrive - ELU\Documents\Python\AoC-2023\4\input4.txt", "r")
 
-total = 0
-
 def countwin(card):
     string = card.split(":")[1]
     string = string[1:]
@@ -30,7 +28,6 @@ for string in f:
     cardvec.append(string)
 
 num_of_card_vec = np.zeros(len(cardvec))
-#print(num_of_card_vec)
 
 cardindex = 0
 for string in cardvec:
@@ -40,7 +37,6 @@ for string in cardvec:
         for ii in range(int(num_of_card_vec[cardindex])+1):
             for j in range(tempcount):
                 num_of_card_vec[cardindex+j+1] = num_of_card_vec[cardindex+j+1] + 1
-            #print(cardindex)
     else:
         for j in range(tempcount):
                 num_of_card_vec[j+1] = num_of_card_vec[j+1] + 1
@@ -48,5 +44,5 @@ for string in cardvec:
     cardindex = cardindex + 1
 
 
-print(num_of_card_vec+1)
-print(sum(num_of_card_vec+1))
+print((num_of_card_vec+1).astype(int))
+print(int(sum(num_of_card_vec+1)))
